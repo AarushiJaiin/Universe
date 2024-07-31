@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Orbitron:wght@400..900&display=swap');
+
+/*============== 
+  Utility css
+==============*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('./images/Vector.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(/images/Group1.svg);
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+.readables {
+  position: relative;
+  z-index: 100;
+}
+
+/*============== 
+  Cards css
+==============*/
+
+.content {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 5%;
+  font-size: 1.2rem;
+  padding-bottom: 50px;
+}
+
+.card-section {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #430e49;
+  /* width: 275px; */
+  padding: 24px 40px;
+  border-radius: 16px;
+  background: rgb(16, 10, 51);
+  background: linear-gradient(148deg, #100a33 0%, #170b36 35%, #430e49 100%);
+}
+
+.card-content > h2,
+h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/*============== 
+  navbar css
+==============*/
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 36px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 15px;
+  color: white;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-list {
+  display: none;
+  gap: 50px;
+}
+
+.nav-list > li {
+  margin: 0;
+  list-style: none;
+}
+
+.nav-list > li:hover {
+  cursor: pointer;
+}
+
+.nav-end {
+  font-size: 1vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-end > p {
+  display: none;
+}
+
+.ham {
+  width: 50px;
+  display: block;
+}
+
+/*============== 
+  Landing section css
+==============*/
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.landing-section {
+  position: relative;
+  height: calc(100vh - 60px);
+}
+
+.hero {
+  color: white;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.earth {
+  position: absolute;
+  left: 50%;
+  top: -75px;
+  z-index: 1;
+}
+
+.hero-text-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  row-gap: 20px;
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+  font-optical-sizing: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-text p {
+  font-size: 1.2vw;
+  margin-bottom: 20px;
+  position: relative;
+  position: relative;
+  z-index: 30;
+}
+
+.learn-more {
+  padding: 20px 30px;
+  font-size: 1rem;
+  font-size: larger;
+  background: linear-gradient(
+    315deg,
+    #cd1013 1.19%,
+    #ff0004 1.5%,
+    #2500ff 94.46%
+  );
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #ff1493; /* Adjust hover color */
+}
+
+.planet-img {
+  position: absolute;
+  min-width: 7rem;
+}
+
+.red-planet {
+  right: 0;
+  top: 0;
+  z-index: 20;
+  width: 12vw;
+}
+.ring-planet {
+  left: 0;
+  bottom: 15%;
+  z-index: 20;
+  width: 16vw;
+}
+.ring-planet-bg {
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 32vw;
+}
+.multiColor-planet {
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 20vw;
+}
+.white-moon {
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 10vw;
+}
+
+.gray-moon {
+  left: 50%;
+  bottom: 0;
+  z-index: 10;
+  width: 10vw;
+}
+.blue-planet {
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 8vw;
+}
+
+/*============== 
+  Sun section css
+==============*/
+.sunimg {
+  width: 100%;
+}
+
+/*============== 
+  Mercury section css
+==============*/
+
+.mercury-section {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mercury-planet {
+  width: 40vw;
+}
+
+/*============== 
+  Venus section css
+==============*/
+
+.venus-section {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  align-content: end;
+}
+
+.venus-planet {
+  width: 100%;
+}
+
+/*============== 
+  Earth section css
+==============*/
+
+.earth-section-content {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-items: end;
+}
+
+.notations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.earth-card-section {
+  display: flex;
+  width: 100%;
+}
+
+.earth-section-card {
+  width: 100%;
+}
+
+.moon-planet-heading {
+  font-size: 2rem;
+}
+
+.moon-planet-section {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.earth-planet {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.arrow-img {
+  position: absolute;
+  right: -30%;
+  top: 0%;
+  display: none;
+}
+
+.rocket-img {
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+  width: 12vw;
+  min-width: 70px;
+}
+
+/*============== 
+  Mars section css
+==============*/
+.mars-moon-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mars-section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.mars-cards-section {
+  padding: 24px;
+  grid-column: span 12 / span 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.mars-content-section {
+  grid-column: span 12 / span 12;
+}
+
+.mars-planet {
+  width: 20em;
+}
+
+/*============== 
+  Footer section css
+==============*/
+
+.footer-section {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer-section > footer {
+  background-color: #1e1e1e;
+  width: 90%;
+  padding: 2rem 1rem;
+  border-radius: 40px;
+  border: 2px solid #430e49;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.inp-div {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 4px 8px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.inp {
+  padding: 15px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  grid-column: span 2 / span 2;
+}
+
+.inp-btn {
+  background: linear-gradient(
+    315deg,
+    #cd1013 1.19%,
+    #ff0004 1.5%,
+    #2500ff 94.46%
+  );
+  border: none;
+  padding: 8px 8px;
+  border-radius: 40px;
+  font: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 1 / span 1;
+}
+
+.inp-btn > span {
+  margin: 0 4px;
+}
+
+.right-arrow {
+  width: 20px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-end > p {
+    display: flex;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .navbar {
+    width: 90%;
+    padding: 18px 30px;
+  }
+
+  .hero-text-heading {
+    font-size: 3.5rem;
+  }
+
+  .card-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mercury-section {
+    padding: 30px 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .venus-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .venus-card-section {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .earth-section-content {
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .earth-card-section {
+    width: fit-content;
+  }
+
+  .moon-planet-section {
+    text-align: end;
+  }
+
+  .moon-planet-heading {
+    font-size: 2rem;
+  }
+
+  .arrow-img {
+    display: block;
+  }
+
+  .mars-cards-section {
+    grid-column: span 4 / span 4;
+  }
+
+  .mars-content-section {
+    grid-column: span 8 / span 8;
+  }
+
+  .mars-moon-section {
+    flex-wrap: nowrap;
+  }
+
+  .mars-planet {
+    width: 100%;
+  }
+
+  .footer-section > footer {
+    padding: 2rem;
+  }
+
+  .footer-nav-list {
+    flex-direction: row;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1010px) {
+  .hero-text-heading {
+    font-size: 5rem;
+  }
+
+  .moon-planet-heading {
+    font-size: 2rem;
+  }
+}
